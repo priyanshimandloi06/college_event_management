@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Registration | CampusEvents</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="event-registration" data-nav="student">
+  <nav class="navbar" data-render="nav"></nav>
+
+  <main>
+    <section class="page-header">
+      <span class="eyebrow">Student Registration</span>
+      <h1 class="page-title">Confirm your event registration</h1>
+      <p class="intro-text">Fill the registration details and continue to payment to generate your digital pass.</p>
+    </section>
+
+    <div id="selectedEventInfo"></div>
+
+    <section class="form-panel compact">
+      <div id="eventRegisterMessage" class="hidden"></div>
+      <form id="eventRegistrationForm" class="form-grid">
+        <div class="field">
+          <label for="regName">Student Name</label>
+          <input id="regName" name="name" type="text" required>
+        </div>
+        <div class="field">
+          <label for="regEnrollmentNumber">Enrollment Number</label>
+          <input id="regEnrollmentNumber" name="enrollmentNumber" type="text" required>
+        </div>
+        <div class="field">
+          <label for="regBranch">Branch</label>
+          <input id="regBranch" name="branch" type="text" required>
+        </div>
+        <div class="field">
+          <label for="regSemester">Semester</label>
+          <input id="regSemester" name="semester" type="text" required>
+        </div>
+        <div class="field">
+          <label for="regMobileNumber">Mobile Number</label>
+          <input id="regMobileNumber" name="mobileNumber" type="tel" required>
+        </div>
+        <div class="field">
+          <label for="regEmail">Email</label>
+          <input id="regEmail" name="email" type="email" required>
+        </div>
+        <div class="field full">
+          <label for="paymentMethod">Payment Method</label>
+          <select id="paymentMethod" name="paymentMethod" required>
+            <option value="UPI">UPI</option>
+            <option value="QR Code">QR Code</option>
+            <option value="Card">Card</option>
+            <option value="Net Banking">Net Banking</option>
+          </select>
+        </div>
+        <div class="field full">
+          <button class="btn" type="submit">Proceed to Payment</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer" data-render="footer"></footer>
+  <script src="script.js"></script>
+</body>
+</html>

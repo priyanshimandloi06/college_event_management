@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Events | CampusEvents</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="events" data-nav="public">
+  <nav class="navbar" data-render="nav"></nav>
+
+  <main>
+    <section class="page-header">
+      <div class="split-header">
+        <div>
+          <span class="eyebrow">Upcoming Events</span>
+          <h1 class="page-title">Discover live events across campus</h1>
+          <p class="intro-text">Browse professionally presented event cards, check important details, and move into registration once you log in as a student.</p>
+        </div>
+        <a class="btn-secondary" href="login.html">Login to Register</a>
+      </div>
+    </section>
+
+    <section id="eventsEmpty" class="empty-state hidden">
+      <p>No events have been published yet.</p>
+    </section>
+
+    <section id="eventsList" class="card-container"></section>
+  </main>
+
+  <footer class="footer" data-render="footer"></footer>
+  <script src="script.js"></script>
+</body>
+</html>

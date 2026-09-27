@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | CampusEvents</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="contact" data-nav="public">
+  <nav class="navbar" data-render="nav"></nav>
+
+  <main>
+    <section class="page-header contact-copy">
+      <span class="eyebrow">Support Desk</span>
+      <h1 class="page-title">Connect with the event coordination team</h1>
+      <p class="intro-text">Reach out for support related to registrations, organizer approval, payment help, or event publishing queries.</p>
+    </section>
+
+    <section class="form-layout">
+      <div class="form-panel">
+        <h2>Send a Message</h2>
+        <div id="contactMessage" class="hidden"></div>
+        <form id="contactForm" class="form-grid single">
+          <div class="field">
+            <label for="contactName">Name</label>
+            <input id="contactName" name="name" type="text" required>
+          </div>
+          <div class="field">
+            <label for="contactEmail">Email</label>
+            <input id="contactEmail" name="email" type="email" required>
+          </div>
+          <div class="field">
+            <label for="contactRole">Role</label>
+            <select id="contactRole" name="role" required>
+              <option value="student">Student</option>
+              <option value="admin">Admin</option>
+              <option value="visitor">Visitor</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="contactMessageBox">Message</label>
+            <textarea id="contactMessageBox" name="message" required></textarea>
+          </div>
+          <button class="btn" type="submit">Submit Query</button>
+        </form>
+      </div>
+
+      <aside class="timeline">
+        <h2>Support Scope</h2>
+        <ul class="timeline-list">
+          <li>Student account and registration help</li>
+          <li>Admin onboarding and publishing flow guidance</li>
+          <li>Digital pass and payment confirmation support</li>
+        </ul>
+        <span class="panel-badge">Response-ready coordination desk</span>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="footer" data-render="footer"></footer>
+  <script src="script.js"></script>
+</body>
+</html>

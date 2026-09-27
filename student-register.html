@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Registration | CampusEvents</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="student-register" data-nav="public">
+  <nav class="navbar" data-render="nav"></nav>
+
+  <main>
+    <section class="page-header">
+      <span class="eyebrow">Student Onboarding</span>
+      <h1 class="page-title">Create your student account</h1>
+      <p class="intro-text">This account is used for event registration, payment confirmation, and digital pass generation.</p>
+    </section>
+
+    <section class="form-panel">
+      <div id="studentRegisterMessage" class="hidden"></div>
+      <form id="studentRegisterForm" class="form-grid">
+        <div class="field">
+          <label for="studentName">Name</label>
+          <input id="studentName" name="name" type="text" required>
+        </div>
+        <div class="field">
+          <label for="studentEnrollmentNumber">Enrollment Number</label>
+          <input id="studentEnrollmentNumber" name="enrollmentNumber" type="text" required>
+        </div>
+        <div class="field">
+          <label for="studentCourse">Course</label>
+          <input id="studentCourse" name="course" type="text" required>
+        </div>
+        <div class="field">
+          <label for="studentBranch">Branch</label>
+          <input id="studentBranch" name="branch" type="text" required>
+        </div>
+        <div class="field">
+          <label for="studentSemester">Semester</label>
+          <input id="studentSemester" name="semester" type="text" required>
+        </div>
+        <div class="field">
+          <label for="studentYear">Year</label>
+          <input id="studentYear" name="year" type="text" required>
+        </div>
+        <div class="field">
+          <label for="studentCollegeName">College Name</label>
+          <input id="studentCollegeName" name="collegeName" type="text" required>
+        </div>
+        <div class="field">
+          <label for="studentMobileNumber">Mobile Number</label>
+          <input id="studentMobileNumber" name="mobileNumber" type="tel" required>
+        </div>
+        <div class="field">
+          <label for="studentEmail">Email</label>
+          <input id="studentEmail" name="email" type="email" required>
+        </div>
+        <div class="field">
+          <label for="studentPassword">Password</label>
+          <input id="studentPassword" name="password" type="password" required>
+        </div>
+        <div class="field full">
+          <button class="btn" type="submit">Create Student Account</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer" data-render="footer"></footer>
+  <script src="script.js"></script>
+</body>
+</html>

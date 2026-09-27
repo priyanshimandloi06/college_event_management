@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Dashboard | CampusEvents</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="student-dashboard" data-nav="student">
+  <nav class="navbar" data-render="nav"></nav>
+
+  <main>
+    <section class="page-header">
+      <span class="eyebrow">Student Dashboard</span>
+      <h1 id="studentDashboardHeading" class="page-title">Welcome</h1>
+      <p class="intro-text">Track live events, notifications, registrations, and digital passes from a cleaner and more professional student workspace.</p>
+      <div id="studentStats" class="stats-grid"></div>
+    </section>
+
+    <section class="dashboard">
+      <article class="dashboard-card">
+        <h3>Explore Events</h3>
+        <p>Browse all published campus events and register from the live events page.</p>
+        <div class="stack-actions">
+          <a class="btn" href="events.html">View Events</a>
+        </div>
+      </article>
+      <article class="dashboard-card">
+        <h3>Digital Passes</h3>
+        <p>Review your latest verified event pass after payment confirmation.</p>
+        <div class="stack-actions">
+          <a class="btn-secondary" href="pass.html">Open Passes</a>
+        </div>
+      </article>
+      <article class="dashboard-card">
+        <h3>Need Help?</h3>
+        <p>Use the support page if you need assistance with registration or event access.</p>
+        <div class="stack-actions">
+          <a class="btn-ghost" href="contact.html">Contact Support</a>
+        </div>
+      </article>
+    </section>
+
+    <section class="two-column">
+      <article class="table-card">
+        <h2>Recent Notifications</h2>
+        <div id="studentNotifications" class="notification-list"></div>
+      </article>
+      <article class="timeline">
+        <h2>Registration Timeline</h2>
+        <ul id="studentTimeline" class="timeline-list"></ul>
+      </article>
+    </section>
+  </main>
+
+  <footer class="footer" data-render="footer"></footer>
+  <script src="script.js"></script>
+</body>
+</html>

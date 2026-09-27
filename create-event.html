@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Event | CampusEvents</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="create-event" data-nav="admin">
+  <nav class="navbar" data-render="nav"></nav>
+
+  <main>
+    <section class="page-header">
+      <span class="eyebrow">Event Publishing</span>
+      <h1 class="page-title">Create and publish a new event</h1>
+      <p class="intro-text">Once published, the event becomes visible to logged-in students and a notification is generated automatically.</p>
+    </section>
+
+    <section class="form-panel">
+      <div id="createEventMessage" class="hidden"></div>
+      <form id="createEventForm" class="form-grid">
+        <div class="field">
+          <label for="eventName">Event Name</label>
+          <input id="eventName" name="name" type="text" required>
+        </div>
+        <div class="field">
+          <label for="eventVenue">Venue</label>
+          <input id="eventVenue" name="venue" type="text" required>
+        </div>
+        <div class="field full">
+          <label for="eventDescription">Event Description</label>
+          <textarea id="eventDescription" name="description" required></textarea>
+        </div>
+        <div class="field">
+          <label for="eventDate">Date</label>
+          <input id="eventDate" name="date" type="date" required>
+        </div>
+        <div class="field">
+          <label for="eventTime">Time</label>
+          <input id="eventTime" name="time" type="time" required>
+        </div>
+        <div class="field">
+          <label for="registrationEnd">Registration End Date</label>
+          <input id="registrationEnd" name="registrationEnd" type="date" required>
+        </div>
+        <div class="field">
+          <label for="eventFees">Event Fees</label>
+          <input id="eventFees" name="fees" type="number" min="0" step="1" required>
+        </div>
+        <div class="field full">
+          <label for="eventBrochure">Brochure / Event Material</label>
+          <textarea id="eventBrochure" name="brochure" placeholder="Add brochure title, file reference, or summary for the uploaded brochure." required></textarea>
+        </div>
+        <div class="field full">
+          <label for="posterUrl">Poster Image URL</label>
+          <input id="posterUrl" name="posterUrl" type="url" placeholder="Optional event poster or hero image URL">
+        </div>
+        <div class="field full">
+          <button class="btn" type="submit">Publish Event</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer" data-render="footer"></footer>
+  <script src="script.js"></script>
+</body>
+</html>

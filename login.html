@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | CampusEvents</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="login" data-nav="public">
+  <nav class="navbar" data-render="nav"></nav>
+
+  <main>
+    <section class="page-header">
+      <div class="split-header">
+        <div>
+          <span class="eyebrow">Access Portal</span>
+          <h1 class="page-title">Secure access for students and organizers</h1>
+          <p class="intro-text">A cleaner login experience for both roles, with professional presentation and separate dashboard journeys after sign-in.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="form-layout">
+      <div class="form-panel">
+        <h2>Sign In</h2>
+        <p class="helper">Use the role that matches your registered account. Admin access is only for authorized organizers.</p>
+        <div id="loginMessage" class="hidden"></div>
+        <form id="loginForm" class="form-grid single">
+          <div class="field">
+            <label for="role">Role</label>
+            <select id="role" name="role" required>
+              <option value="student">Student</option>
+              <option value="admin">Admin</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="loginEmail">Email</label>
+            <input id="loginEmail" name="email" type="email" placeholder="name@college.edu" required>
+          </div>
+          <div class="field">
+            <label for="loginPassword">Password</label>
+            <input id="loginPassword" name="password" type="password" placeholder="Enter your password" required>
+          </div>
+          <button class="btn" type="submit">Login</button>
+        </form>
+      </div>
+
+      <aside class="timeline">
+        <h2>Quick Start Paths</h2>
+        <ul class="timeline-list">
+          <li><strong>Student:</strong> create a student account, browse live events, register, pay, and collect your digital pass.</li>
+          <li><strong>Admin:</strong> register with the college admin password, publish events, and manage only your event data.</li>
+          <li><strong>Security:</strong> organizer dashboards remain separate from student dashboards for cleaner access control.</li>
+        </ul>
+        <div class="stack-actions">
+          <a class="btn-secondary" href="student-register.html">Student Registration</a>
+          <a class="btn-ghost" href="admin-register.html">Admin Registration</a>
+        </div>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="footer" data-render="footer"></footer>
+  <script src="script.js"></script>
+</body>
+</html>

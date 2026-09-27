@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard | CampusEvents</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="admin-dashboard" data-nav="admin">
+  <nav class="navbar" data-render="nav"></nav>
+
+  <main>
+    <section class="page-header">
+      <span class="eyebrow">Organizer Dashboard</span>
+      <h1 id="adminDashboardHeading" class="page-title">Organizer Desk</h1>
+      <p class="intro-text">Create and publish events, monitor registrations, and store post-event data inside a cleaner organizer-facing workspace.</p>
+      <div id="adminStats" class="stats-grid"></div>
+    </section>
+
+    <section class="dashboard">
+      <article class="dashboard-card">
+        <h3>Create Event</h3>
+        <p>Publish new events with date, venue, registration deadline, brochure details, and fee structure.</p>
+        <div class="stack-actions">
+          <a class="btn" href="create-event.html">Create Event</a>
+        </div>
+      </article>
+      <article class="dashboard-card">
+        <h3>Student Access Data</h3>
+        <p>Only the admin who created an event can view its participant records and registration timestamps.</p>
+      </article>
+      <article class="dashboard-card">
+        <h3>Post-Event Archive</h3>
+        <p>Store a review and reference links for event glimpses once the event concludes.</p>
+      </article>
+    </section>
+
+    <section class="table-card">
+      <h2>My Events</h2>
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th>Event</th>
+              <th>Date</th>
+              <th>Venue</th>
+              <th>Fees</th>
+              <th>Status</th>
+              <th>Registrations</th>
+            </tr>
+          </thead>
+          <tbody id="adminEventsTable"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="table-card">
+      <h2>Registered Students</h2>
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th>Student</th>
+              <th>Event</th>
+              <th>Enrollment</th>
+              <th>Branch</th>
+              <th>Semester</th>
+              <th>Registered At</th>
+            </tr>
+          </thead>
+          <tbody id="adminParticipantsTable"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="form-panel">
+      <h2>Post-Event Review and Glimpses</h2>
+      <p class="helper">Store review notes and image references for future access.</p>
+      <div id="postEventMessage" class="hidden"></div>
+      <form id="postEventForm" class="form-grid">
+        <div class="field full">
+          <label for="postEventSelect">Select Event</label>
+          <select id="postEventSelect" name="eventId" required></select>
+        </div>
+        <div class="field full">
+          <label for="postEventReview">Event Review</label>
+          <textarea id="postEventReview" name="review" placeholder="Write the post-event summary here..." required></textarea>
+        </div>
+        <div class="field full">
+          <label for="postEventImages">Image Links / Glimpses</label>
+          <textarea id="postEventImages" name="images" placeholder="Add image file names, links, or notes for stored event images."></textarea>
+        </div>
+        <div class="field full">
+          <button class="btn" type="submit">Save Post-Event Details</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer" data-render="footer"></footer>
+  <script src="script.js"></script>
+</body>
+</html>

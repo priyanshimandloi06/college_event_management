@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Registration | CampusEvents</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="admin-register" data-nav="public">
+  <nav class="navbar" data-render="nav"></nav>
+
+  <main>
+    <section class="page-header">
+      <span class="eyebrow">Organizer Authorization</span>
+      <h1 class="page-title">Register as an event admin</h1>
+      <p class="intro-text">Only users with the college-provided admin password can register and manage events.</p>
+    </section>
+
+    <section class="form-panel">
+      <div class="alert-box">Prototype admin password for this project: <strong>CEM-ADMIN-2026</strong></div>
+      <div id="adminRegisterMessage" class="hidden"></div>
+      <form id="adminRegisterForm" class="form-grid">
+        <div class="field">
+          <label for="adminName">Name</label>
+          <input id="adminName" name="name" type="text" required>
+        </div>
+        <div class="field">
+          <label for="adminEmail">Email</label>
+          <input id="adminEmail" name="email" type="email" required>
+        </div>
+        <div class="field">
+          <label for="adminContactNumber">Contact Number</label>
+          <input id="adminContactNumber" name="contactNumber" type="tel" required>
+        </div>
+        <div class="field">
+          <label for="adminType">Student / Faculty</label>
+          <select id="adminType" name="adminType" required>
+            <option value="student">Student</option>
+            <option value="faculty">Faculty</option>
+          </select>
+        </div>
+
+        <div id="adminStudentFields" class="field full">
+          <div class="form-grid">
+            <div class="field">
+              <label for="adminBranch">Branch</label>
+              <input id="adminBranch" name="branch" type="text">
+            </div>
+            <div class="field">
+              <label for="adminSemester">Semester</label>
+              <input id="adminSemester" name="semester" type="text">
+            </div>
+            <div class="field full">
+              <label for="adminEnrollmentNumber">Enrollment Number</label>
+              <input id="adminEnrollmentNumber" name="enrollmentNumber" type="text">
+            </div>
+          </div>
+        </div>
+
+        <div id="adminFacultyFields" class="field full hidden">
+          <div class="form-grid">
+            <div class="field">
+              <label for="facultyName">Faculty Name</label>
+              <input id="facultyName" name="facultyName" type="text">
+            </div>
+            <div class="field">
+              <label for="facultyCollegeName">College Name</label>
+              <input id="facultyCollegeName" name="facultyCollegeName" type="text">
+            </div>
+            <div class="field full">
+              <label for="department">Department</label>
+              <input id="department" name="department" type="text">
+            </div>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="adminPassword">College Admin Password</label>
+          <input id="adminPassword" name="adminPassword" type="password" required>
+        </div>
+        <div class="field">
+          <label for="adminAccountPassword">Create Login Password</label>
+          <input id="adminAccountPassword" name="password" type="password" required>
+        </div>
+        <div class="field full">
+          <button class="btn" type="submit">Register as Admin</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer" data-render="footer"></footer>
+  <script src="script.js"></script>
+</body>
+</html>
